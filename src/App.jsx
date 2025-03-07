@@ -3,7 +3,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div>
+    <div className="w-full flex justify-center mt-70">
       <Rating />
     </div>
   );
