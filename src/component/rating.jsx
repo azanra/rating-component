@@ -6,9 +6,14 @@ import { useState } from "react";
 
 function Question() {
   const [rating, setRating] = useState(0);
+  const [displayAnswer, setDisplayAnswer] = useState(false);
 
   const handleSetRating = (event) => {
     setRating(Number(event.target.value));
+  };
+
+  const handleDisplayAnswer = () => {
+    setDisplayAnswer(!displayAnswer);
   };
 
   const ratingRadio = (function () {
@@ -21,14 +26,18 @@ function Question() {
     return ratingRadio;
   })();
 
-  <div>
-    <form>
-      <Header text={componentAttribute.question.header.text} />
-      <Body text={componentAttribute.question.body.text} />
-      {ratingRadio}
-      <button>Submit</button>
-    </form>
-  </div>;
+  return displayAnswer ? (
+    <Answer rating={rating} ratingOption={5} />
+  ) : (
+    <div>
+      <form>
+        <Header text={componentAttribute.question.header.text} />
+        <Body text={componentAttribute.question.body.text} />
+        {ratingRadio}
+        <button onClick={handleDisplayAnswer}>Submit</button>
+      </form>
+    </div>
+  );
 }
 
 function Answer({ rating, ratingOption }) {
