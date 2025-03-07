@@ -29,7 +29,7 @@ function Question() {
   return displayAnswer ? (
     <Answer rating={rating} ratingOption={5} />
   ) : (
-    <div>
+    <div className="p-8 bg-[#252d37] rounded-3xl">
       <form>
         <Header text={componentAttribute.question.header.text} />
         <Body text={componentAttribute.question.body.text} />
