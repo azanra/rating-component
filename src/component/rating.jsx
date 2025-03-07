@@ -21,13 +21,22 @@ function Question() {
     return ratingRadio;
   })();
 
+  <div>
+    <form>
+      <Header text={componentAttribute.question.header.text} />
+      <Body text={componentAttribute.question.body.text} />
+      {ratingRadio}
+      <button>Submit</button>
+    </form>
+  </div>;
+}
+
+function Answer({ rating, ratingOption }) {
   return (
     <div>
-      <form action="">
-        <Header text={componentAttribute.question.header.text} />
-        <Body text={componentAttribute.question.body.text} />
-        {ratingRadio}
-      </form>
+      <span>{`You selected ${rating} out of ${ratingOption}`}</span>
+      <Header text={componentAttribute.answer.header.text} />
+      <Body text={componentAttribute.answer.body.text} />
     </div>
   );
 }
