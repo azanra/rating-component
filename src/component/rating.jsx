@@ -31,7 +31,7 @@ function Question() {
   return displayAnswer ? (
     <Answer rating={rating} ratingOption={5} />
   ) : (
-    <div className="p-8 bg-[#252d37] rounded-3xl">
+    <div className="p-8 bg-[#252d37] rounded-3xl w-1/4">
       <form>
         <div>
           <img src={iconStar} alt="icon star" />
@@ -49,7 +49,7 @@ function Question() {
 
 function Answer({ rating, ratingOption }) {
   return (
-    <div>
+    <div className="p-8 bg-[#252d37] rounded-3xl w-1/4">
       <div>
         <img src={illustration} alt="note illustration" />
       </div>
