@@ -1,3 +1,3 @@
 export default function Body({ text }) {
-  return <p>{text}</p>;
+  return <p className="mb-5">{text}</p>;
 }
