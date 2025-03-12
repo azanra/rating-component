@@ -1,4 +1,4 @@
-export default function Checkbox({ value, handleSetRating }) {
+export default function Radio({ value, handleSetRating }) {
   return (
     <>
       <label

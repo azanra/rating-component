@@ -1,7 +1,7 @@
 import Header from "./header.jsx";
 import { componentAttribute } from "./attribute/attribute.js";
 import Body from "./body.jsx";
-import Checkbox from "./checkbox.jsx";
+import Radio from "./radioRating.jsx";
 import { useState } from "react";
 import iconStar from "../assets/images/icon-star.svg";
 import illustration from "../assets/images/illustration-thank-you.svg";
@@ -22,7 +22,7 @@ function Question() {
     const ratingOption = [1, 2, 3, 4, 5];
     const ratingRadio = ratingOption.map((item, index) => {
       return (
-        <Checkbox key={index} value={item} handleSetRating={handleSetRating} />
+        <Radio key={index} value={item} handleSetRating={handleSetRating} />
       );
     });
     return ratingRadio;
@@ -38,7 +38,7 @@ function Question() {
         </div>
         <Header text={componentAttribute.question.header.text} />
         <Body text={componentAttribute.question.body.text} />
-        {ratingRadio}
+        <div className="flex justify-center gap-7">{ratingRadio}</div>
         <div>
           <button onClick={handleDisplayAnswer}>Submit</button>
         </div>
