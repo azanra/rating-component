@@ -55,12 +55,18 @@ function Question() {
 function Answer({ rating, ratingOption }) {
   return (
     <div className="p-8 bg-[#252d37] rounded-3xl w-1/4">
-      <div>
+      <div className="flex justify-center mt-6">
         <img src={illustration} alt="note illustration" />
       </div>
-      <span>{`You selected ${rating} out of ${ratingOption}`}</span>
-      <Header text={componentAttribute.answer.header.text} />
-      <Body text={componentAttribute.answer.body.text} />
+      <div className="bg-[#343942] fit w-fit ml-27 mt-10 text-orange-400 px-6 py-2 rounded-full">
+        <span>{`You selected ${rating} out of ${ratingOption}`}</span>
+      </div>
+      <div className="ml-33">
+        <Header text={componentAttribute.answer.header.text} />
+      </div>
+      <div className="text-center">
+        <Body text={componentAttribute.answer.body.text} />
+      </div>
     </div>
   );
 }
