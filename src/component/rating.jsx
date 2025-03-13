@@ -40,7 +40,12 @@ function Question() {
         <Body text={componentAttribute.question.body.text} />
         <div className="flex justify-center gap-7">{ratingRadio}</div>
         <div>
-          <button onClick={handleDisplayAnswer}>Submit</button>
+          <button
+            onClick={handleDisplayAnswer}
+            className="w-full bg-[#fb7413] mt-8 py-4 rounded-full text-[#252d37] font-bold tracking-widest"
+          >
+            SUBMIT
+          </button>
         </div>
       </form>
     </div>
