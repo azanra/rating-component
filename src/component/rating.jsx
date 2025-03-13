@@ -42,7 +42,7 @@ function Question() {
         <div>
           <button
             onClick={handleDisplayAnswer}
-            className="w-full bg-[#fb7413] mt-8 py-4 rounded-full text-[#252d37] font-bold tracking-widest"
+            className="w-full bg-[#fb7413] mt-8 py-4 rounded-full text-[#252d37] font-bold tracking-widest hover:bg-white"
           >
             SUBMIT
           </button>
