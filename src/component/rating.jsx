@@ -33,7 +33,7 @@ function Question() {
   ) : (
     <div className="p-8 bg-[#252d37] rounded-3xl w-1/4">
       <form>
-        <div>
+        <div className="size-fit bg-[#343942] px-4 py-4 rounded-[50%]">
           <img src={iconStar} alt="icon star" />
         </div>
         <Header text={componentAttribute.question.header.text} />
